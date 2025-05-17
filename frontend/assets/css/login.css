@@ -1,0 +1,227 @@
+/* Login Page Styles */
+:root {
+  --login-bg: #0d1117;
+  --card-bg: #161b22;
+  --border-color: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #7d8590;
+  --accent-color: #ff6a25;
+  --button-hover: #ff8149;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-page {
+  background-color: var(--login-bg);
+  background-image: linear-gradient(to bottom right, rgba(30, 30, 30, 0.7), rgba(13, 17, 23, 0.9)), url('../images/aviation-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+.login-content {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.login-logo {
+  background-color: #0d1117;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.login-aero-logo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.login-irops-logo {
+  height: 30px;
+}
+
+.login-form-container {
+  padding: 30px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.login-form-container h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.login-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.login-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.login-footer {
+  margin-top: 50px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dev-login {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-color);
+  width: 100%;
+}
+
+.dev-note {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Google Sign-In Button */
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  height: 44px;
+  background-color: #fff;
+  color: #3c4043;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 12px;
+  position: relative;
+}
+
+.google-signin-button:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.google-signin-button:active {
+  background-color: #f1f3f4;
+}
+
+.google-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%23EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="%234285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="%23FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="%2334A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 12px;
+}
+
+.button-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Status message */
+.login-status-message {
+  min-height: 20px;
+  margin: 10px 0 20px;
+  padding: 5px;
+  color: #666;
+  font-size: 14px;
+}
+
+.bypass-button {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.bypass-button:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Google Sign-in Button */
+.custom-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #fff;
+  color: #3c4043;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+
+.custom-google-btn:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.custom-google-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.4);
+}
+
+/* Login error styles */
+.login-error {
+  background-color: rgba(255, 106, 37, 0.1);
+  border-left: 3px solid var(--accent-color);
+  color: var(--text-primary);
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+}

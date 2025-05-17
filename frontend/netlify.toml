@@ -1,0 +1,15 @@
+[build]
+  publish = "/"
+  command = ""
+
+# Redirect root URL to login page
+[[redirects]]
+  from = "/"
+  to = "/login.html"
+  status = 302
+
+# Serve HTML files directly
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200

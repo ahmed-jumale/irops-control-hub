@@ -1,0 +1,215 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$q3Wdf0nueZGhsBihlGAZI8$vUQAMGJ6P5cFnzl51f43/eRQoSL8YahPaVPestnTKs8=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "ahmed.jumale",
+      "first_name": "Ahmed",
+      "last_name": "Jumale",
+      "email": "ahmed.jumale@aero.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-05-16T18:53:11Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "irops_app.flight",
+    "pk": 1,
+    "fields": {
+      "flight_number": "AE101",
+      "date": "2025-05-17",
+      "etd": "2025-05-17T10:00:00Z",
+      "eta": "2025-05-17T12:30:00Z",
+      "new_etd_eta": "2025-05-17T14:00:00Z",
+      "pax_count": 127,
+      "passenger_mix": "82 Adults, 25 Children, 20 Infants",
+      "irops_type": "delay",
+      "is_active": true
+    }
+  },
+  {
+    "model": "irops_app.flight",
+    "pk": 2,
+    "fields": {
+      "flight_number": "AE202",
+      "date": "2025-05-17",
+      "etd": "2025-05-17T13:45:00Z",
+      "eta": "2025-05-17T16:15:00Z",
+      "new_etd_eta": null,
+      "pax_count": 98,
+      "passenger_mix": "90 Adults, 8 Children",
+      "irops_type": "diversion",
+      "is_active": true
+    }
+  },
+  {
+    "model": "irops_app.flight",
+    "pk": 3,
+    "fields": {
+      "flight_number": "AE303",
+      "date": "2025-05-18",
+      "etd": "2025-05-18T08:30:00Z",
+      "eta": "2025-05-18T10:45:00Z",
+      "new_etd_eta": "2025-05-18T11:30:00Z",
+      "pax_count": 142,
+      "passenger_mix": "115 Adults, 27 Children",
+      "irops_type": "delay",
+      "is_active": true
+    }
+  },
+  {
+    "model": "irops_app.aircraft",
+    "pk": 1,
+    "fields": {
+      "tail_number": "N123AE",
+      "assigned_flights": [1, 3]
+    }
+  },
+  {
+    "model": "irops_app.aircraft",
+    "pk": 2,
+    "fields": {
+      "tail_number": "N456AE",
+      "assigned_flights": [2]
+    }
+  },
+  {
+    "model": "irops_app.teammember",
+    "pk": 1,
+    "fields": {
+      "name": "John Smith",
+      "role": "Operations Manager",
+      "team": "exec"
+    }
+  },
+  {
+    "model": "irops_app.teammember",
+    "pk": 2,
+    "fields": {
+      "name": "Sarah Johnson",
+      "role": "Customer Service Lead",
+      "team": "customer_service"
+    }
+  },
+  {
+    "model": "irops_app.teammember",
+    "pk": 3,
+    "fields": {
+      "name": "Michael Chen",
+      "role": "Digital Experience Director",
+      "team": "digital"
+    }
+  },
+  {
+    "model": "irops_app.teammember",
+    "pk": 4,
+    "fields": {
+      "name": "Priya Patel",
+      "role": "Senior Concierge",
+      "team": "concierge"
+    }
+  },
+  {
+    "model": "irops_app.acknowledgment",
+    "pk": 1,
+    "fields": {
+      "name": "David Wilson",
+      "flight": 1,
+      "last_comms": "sms",
+      "ack_status": "success"
+    }
+  },
+  {
+    "model": "irops_app.acknowledgment",
+    "pk": 2,
+    "fields": {
+      "name": "Emma Brown",
+      "flight": 1,
+      "last_comms": "email",
+      "ack_status": "warning"
+    }
+  },
+  {
+    "model": "irops_app.acknowledgment",
+    "pk": 3,
+    "fields": {
+      "name": "Carlos Mendez",
+      "flight": 2,
+      "last_comms": "phone",
+      "ack_status": "success"
+    }
+  },
+  {
+    "model": "irops_app.acknowledgment",
+    "pk": 4,
+    "fields": {
+      "name": "Lucy Zhang",
+      "flight": 2,
+      "last_comms": "lounge",
+      "ack_status": "failed"
+    }
+  },
+  {
+    "model": "irops_app.shuttleinformation",
+    "pk": 1,
+    "fields": {
+      "flight": 1,
+      "shuttle_a_time": "2025-05-17T14:30:00Z",
+      "pickup_a": "Terminal 1 Gate A",
+      "shuttle_b_time": "2025-05-17T15:00:00Z",
+      "pickup_b": "Terminal 1 Gate B",
+      "shuttle_company": "Premium Transportation",
+      "driver_name": "Robert Johnson",
+      "driver_phone": "+1-555-123-4567"
+    }
+  },
+  {
+    "model": "irops_app.shuttleinformation",
+    "pk": 2,
+    "fields": {
+      "flight": 2,
+      "shuttle_a_time": "2025-05-17T17:00:00Z",
+      "pickup_a": "Terminal 2 Main Entrance",
+      "shuttle_b_time": null,
+      "pickup_b": "",
+      "shuttle_company": "Elite Shuttle Services",
+      "driver_name": "Maria Garcia",
+      "driver_phone": "+1-555-987-6543"
+    }
+  },
+  {
+    "model": "irops_app.teamaction",
+    "pk": 1,
+    "fields": {
+      "action_name": "Arrange hotel accommodations for AE101 passengers",
+      "assigned_team": "Concierge",
+      "status": "complete",
+      "notes": "Reserved 45 rooms at Hilton Airport Hotel. Confirmation #12345."
+    }
+  },
+  {
+    "model": "irops_app.teamaction",
+    "pk": 2,
+    "fields": {
+      "action_name": "Notify all AE202 passengers about diversion",
+      "assigned_team": "Digital",
+      "status": "in_progress",
+      "notes": "App notifications sent. Email and SMS in progress."
+    }
+  },
+  {
+    "model": "irops_app.teamaction",
+    "pk": 3,
+    "fields": {
+      "action_name": "Coordinate catering for delayed flights",
+      "assigned_team": "Operations",
+      "status": "pending",
+      "notes": "Need to confirm meal requirements for flights AE101 and AE303."
+    }
+  }
+]

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IROPS Control Hub - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body class="login-page">
+  <!-- Login Container -->
+  <div class="login-container">
+    <div class="login-content">
+      <!-- Logo Section -->
+      <div class="login-logo">
+        <img src="assets/images/aerologo.png" alt="Aero Logo" class="login-aero-logo">
+        <img src="assets/images/controlhub.png" alt="IROPS Control Hub" class="login-irops-logo">
+      </div>
+      
+      <!-- Login Section -->
+      <div class="login-form-container">
+        <h1>Welcome</h1>
+        <p class="login-subtitle">Sign in to access the IROPS Control Hub</p>
+        
+        <!-- Status Messages -->
+        <div id="login-status" class="login-status-message"></div>
+        
+        <div class="login-options">
+          <!-- Custom Google Sign-In Button -->
+          <button id="google-signin-btn" class="google-signin-button">
+            <span class="google-icon"></span>
+            <span class="button-text">Sign in with Google</span>
+          </button>
+          
+          <!-- For development purposes - bypass login -->
+          <div class="dev-login">
+            <p class="dev-note">Development Mode:</p>
+            <button id="bypass-login" class="bypass-button">Bypass Login</button>
+          </div>
+        </div>
+        
+        <!-- Footer Info -->
+        <div class="login-footer">
+          <p>For authorized Aero personnel only</p>
+          <p>© 2025 Aero - IROPS Control Hub</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript -->
+  <script src="assets/js/login.js"></script>
+  
+  <!-- Initialize login functionality once DOM is loaded -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Google Sign-In
+      if (typeof initGoogleSignIn === 'function') {
+        initGoogleSignIn();
+      }
+      
+      // Set up bypass button (development only)
+      if (typeof setupBypassButton === 'function') {
+        setupBypassButton();
+      }
+      
+      // Show initial status
+      if (typeof showLoginStatus === 'function') {
+        showLoginStatus('Please sign in with your @aero.com account');
+      }
+    });
+  </script>
+</body>
+</html>
